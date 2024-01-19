@@ -1,4 +1,4 @@
-Sure, I'll guide you through the process of generating SSH keys on Windows 11 and configuring passwordless login to an Ubuntu Server. Follow these steps:
+guide through the process of generating SSH keys on Windows 11 and configuring passwordless login to an Ubuntu Server. Follow these steps:
 
 ### Step 1: Generate SSH Key Pair on Windows 11
 
