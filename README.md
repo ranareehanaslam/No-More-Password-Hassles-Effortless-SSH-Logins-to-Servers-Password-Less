@@ -1,8 +1,7 @@
-Certainly! Here's an enhanced and visually improved guide:
 
 ### Step 1: Generate SSH Key Pair on Windows 11
 
-1. 🖥️ Open **PowerShell as an administrator**.
+1. 🖥️ **Open PowerShell as an administrator.**
    
 2. 💻 Use the following command to generate an SSH key pair:
    ```bash
@@ -22,13 +21,15 @@ Certainly! Here's an enhanced and visually improved guide:
    ```
    Copy the entire output.
 
-2. 🌐 Log in to your Ubuntu Server.
+2. 🌐 **Log in to your Ubuntu Server.**
 
-3. 📝 Open or create the `~/.ssh/authorized_keys` file for the user you are logging in as. You can use a text editor like `nano` or `vim`.
+### Step 3: Open or Create the `~/.ssh/authorized_keys` File
 
-4. 📋 Paste the public key into this file and save it.
+1. 📝 **Open or create the `~/.ssh/authorized_keys` file for the user you are logging in as. Use a text editor like nano or vim.**
 
-### Step 3: Configure SSH on Ubuntu Server
+2. 📋 **Paste the public key into this file and save it.**
+
+### Step 4: Configure SSH on Ubuntu Server
 
 1. 🛠️ Ensure that the permissions on the `~/.ssh` directory and `authorized_keys` file are secure:
    ```bash
@@ -41,7 +42,7 @@ Certainly! Here's an enhanced and visually improved guide:
    sudo service ssh restart
    ```
 
-### Step 4: Test Passwordless Login
+### Step 5: Test Passwordless Login
 
 1. 🖥️ Open a new PowerShell window on Windows.
 
