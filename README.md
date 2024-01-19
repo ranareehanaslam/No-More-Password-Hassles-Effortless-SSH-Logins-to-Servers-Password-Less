@@ -1,7 +1,8 @@
+Unlock the power of secure server access! Dive into our step-by-step guide for generating SSH keys on both Windows and Linux. Elevate your server security with a 2048-bit key, configure root access, and seamlessly copy your public key to the server. Follow along to ensure foolproof configuration, tighten permissions, and achieve passwordless logins effortlessly. Level up your SSH game and fortify your digital fortress now! 🔒✨ #SSH #ServerSecurity #TechHowTo
 
 ### Step 1: Generate SSH Key Pair
 
-#### Windows and Linux:
+#### For Windows and Linux:
 
 1. 🖥️ **Open a terminal or PowerShell window.**
 
@@ -9,9 +10,9 @@
    ```bash
    ssh-keygen -t rsa -b 2048
    ```
-   This command initiates the creation of a secure SSH key pair.
+   This command initializes the creation of a secure SSH key pair.
 
-3. 📂 Choose a location to save the key. Press `Enter` for the default location (`~/.ssh/id_rsa` on Linux, or `C:\Users\YourUsername\.ssh\id_rsa` on Windows).
+3. 📂 Choose a location to save the key. Press `Enter` for the default location (`~/.ssh/id_rsa` on Linux or `C:\Users\YourUsername\.ssh\id_rsa` on Windows).
 
 4. 🔒 Optionally, add a passphrase for enhanced security.
 
@@ -34,14 +35,13 @@
    sudo chmod 700 ~/.ssh
    sudo touch ~/.ssh/authorized_keys
    sudo chmod 600 ~/.ssh/authorized_keys
-
    ```
 
 ### Step 3: Open or Create the `~/.ssh/authorized_keys` File
 
 1. 📝 Open or create the `~/.ssh/authorized_keys` file for the user you are logging in as. Use a text editor like nano or vim:
    ```bash
-   sudo nano ~/.ssh/authorized_keys
+   echo "$(cat ~/.ssh/id_rsa.pub)" | sudo tee -a ~/.ssh/authorized_keys
    ```
 
 2. 📋 Paste the public key into this file and save it.
