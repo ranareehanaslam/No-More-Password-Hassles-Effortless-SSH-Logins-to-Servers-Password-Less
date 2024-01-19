@@ -32,11 +32,17 @@ Sure, I'll guide you through the process of generating SSH keys on Windows 11 an
 
 1. Ensure that the permissions on the `~/.ssh` directory and `authorized_keys` file are secure:
    ```bash
+   sudo service ssh restart
+   ```
+### Step 4: Restart SSH on Ubuntu Server
+
+1. Ensure that the permissions on the `~/.ssh` directory and `authorized_keys` file are secure:
+   ```bash
    chmod 700 ~/.ssh
    chmod 600 ~/.ssh/authorized_keys
    ```
 
-### Step 4: Test Passwordless Login
+### Step 5: Test Passwordless Login
 
 1. Open a new PowerShell window on Windows.
 
