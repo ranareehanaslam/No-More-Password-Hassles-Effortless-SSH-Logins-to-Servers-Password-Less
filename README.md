@@ -41,7 +41,7 @@ Unlock the power of secure server access! Dive into our step-by-step guide for g
 
 1. 📝 Open or create the `~/.ssh/authorized_keys` file for the user you are logging in as. Use a text editor like nano or vim:
    ```bash
-   echo "$(cat ~/.ssh/id_rsa.pub)" | sudo tee -a ~/.ssh/authorized_keys
+   nano ~/.ssh/authorized_keys
    ```
 
 2. 📋 Paste the public key into this file and save it.
