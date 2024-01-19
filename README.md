@@ -26,13 +26,7 @@ This guide walks you through the process of generating an SSH key and setting up
    - Follow the prompts to specify the key file location (press Enter to use the default) and set a passphrase if desired.
 
 I've included the missing step for generating the SSH key on Windows using `ssh-keygen`. Thank you for bringing it to my attention.
-
-2. **Generate SSH Key Pair:**
-   - Run the following command to generate an SSH key pair:
-     ```powershell
-     type $env:USERPROFILE\.ssh\id_rsa.pub | ssh user@your_server_ip "cat >> .ssh/authorized_keys"
-     ```
-   - Follow prompts to set the key file location and passphrase.
+.
 
 ## Server Configuration (If needed):
 
@@ -55,10 +49,11 @@ I've included the missing step for generating the SSH key on Windows using `ssh-
    - Locate the public key in `%USERPROFILE%\.ssh\id_rsa.pub`.
 
 2. **Copy Public Key to Ubuntu Server:**
-   - Use `ssh-copy-id` or manually copy the public key content.
+   - Run the following command to copy an SSH key pair:
      ```powershell
-     ssh-copy-id user@ubuntu-server-ip
+     type $env:USERPROFILE\.ssh\id_rsa.pub | ssh user@your_server_ip "cat >> .ssh/authorized_keys"
      ```
+   - Follow prompts to set the key file location and passphrase
 
 ## Step 4: Configure Passwordless Login
 
